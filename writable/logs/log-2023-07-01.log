@@ -1,0 +1,325 @@
+ERROR - 2023-07-01 00:14:44 --> mysqli_sql_exception: Table 'integrador.paquetes' doesn't exist in C:\xampp\htdocs\integrador\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\integrador\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\integrador\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\integrador\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\integrador\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\integrador\app\Models\CalificacionesModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\integrador\app\Controllers\Calificaciones.php(24): App\Models\CalificacionesModel->getCalificaciones()
+#6 C:\xampp\htdocs\integrador\system\CodeIgniter.php(934): App\Controllers\Calificaciones->index()
+#7 C:\xampp\htdocs\integrador\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calificaciones))
+#8 C:\xampp\htdocs\integrador\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\integrador\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-01 00:14:44 --> Table 'integrador.paquetes' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `calificaciones` `c`
+JOIN `usuarios` `tc` ON `c`.`ID_Usuario` = `tc`.`ID_Usuario`
+JOIN `paquetes` `cc` ON `c`.`ID_Paquete` = `cc`.`ID_Paquete`
+WHERE `c`.`estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `calificaciones` `c`
+JOIN `usuarios` `tc` ON `c`.`ID_Usuario` = `tc`.`ID_Usuario`
+JOIN `paquetes` `cc` ON `c`.`ID_Paquete` = `cc`.`ID_Paquete`
+WHERE `c`.`estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `calificaciones` `c`
+JOIN `usuarios` `tc` ON `c`.`ID_Usuario` = `tc`.`ID_Usuario`
+JOIN `paquetes` `cc` ON `c`.`ID_Paquete` = `cc`.`ID_Paquete`
+WHERE `c`.`estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `calificaciones` `c`
+JOIN `usuarios` `tc` ON `c`.`ID_Usuario` = `tc`.`ID_Usuario`
+JOIN `paquetes` `cc` ON `c`.`ID_Paquete` = `cc`.`ID_Paquete`
+WHERE `c`.`estado` = :c.estado:', [...], false)
+ 5 APPPATH\Models\CalificacionesModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Calificaciones.php(24): App\Models\CalificacionesModel->getCalificaciones()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Calificaciones->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calificaciones))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-01 15:42:59 --> Class 'App\Models\UsuariosModel' not found
+in APPPATH\Controllers\Usuarios.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuarios->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-01 15:43:16 --> Call to undefined method App\Models\UsuariosModel::getUsuario
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Usuarios.php(24): CodeIgniter\Model->__call('getUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuarios->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-01 16:41:12 --> Undefined index: descripcion
+in APPPATH\Controllers\Calificaciones.php on line 130.
+ 1 APPPATH\Controllers\Calificaciones.php(130): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: descripcion', 'C:\\xampp\\htdocs\\integrador\\app\\Controllers\\Calificaciones.php', 130, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Calificaciones->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calificaciones))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-01 16:42:20 --> Undefined index: descripcion
+in APPPATH\Controllers\Calificaciones.php on line 130.
+ 1 APPPATH\Controllers\Calificaciones.php(130): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: descripcion', 'C:\\xampp\\htdocs\\integrador\\app\\Controllers\\Calificaciones.php', 130, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Calificaciones->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calificaciones))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-01 18:08:04 --> mysqli_sql_exception: Column 'monto' cannot be null in C:\xampp\htdocs\integrador\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\integrador\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp\htdocs\integrador\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp\htdocs\integrador\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp\htdocs\integrador\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp\htdocs\integrador\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\integrador\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\integrador\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\integrador\app\Controllers\Pagos.php(134): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\integrador\system\CodeIgniter.php(934): App\Controllers\Pagos->create()
+#9 C:\xampp\htdocs\integrador\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pagos))
+#10 C:\xampp\htdocs\integrador\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\integrador\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-07-01 18:08:04 --> Column 'monto' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pagos` (`ID_Reserva`, `monto`, `metodoPago`, `fechaPago`) VALUES (\'8\', NULL, \'Efecctivo\', \'20 10 2023\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pagos` (`ID_Reserva`, `monto`, `metodoPago`, `fechaPago`) VALUES (\'8\', NULL, \'Efecctivo\', \'20 10 2023\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pagos` (`ID_Reserva`, `monto`, `metodoPago`, `fechaPago`) VALUES (\'8\', NULL, \'Efecctivo\', \'20 10 2023\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pagos` (`ID_Reserva`, `monto`, `metodoPago`, `fechaPago`) VALUES (:ID_Reserva:, :monto:, :metodoPago:, :fechaPago:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Pagos.php(134): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pagos->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pagos))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-01 18:10:02 --> mysqli_sql_exception: Unknown column 'c.ID_Hotel' in 'where clause' in C:\xampp\htdocs\integrador\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\integrador\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\integrador\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\integrador\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\integrador\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\integrador\app\Models\PagosModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\integrador\app\Controllers\Pagos.php(68): App\Models\PagosModel->getId('1')
+#6 C:\xampp\htdocs\integrador\system\CodeIgniter.php(934): App\Controllers\Pagos->show('1')
+#7 C:\xampp\htdocs\integrador\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pagos))
+#8 C:\xampp\htdocs\integrador\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\integrador\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-01 18:10:02 --> Unknown column 'c.ID_Hotel' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `pagos` `c`
+JOIN `reservas` `tc` ON `c`.`ID_Reserva` = `tc`.`ID_Reserva`
+WHERE `c`.`ID_Hotel` = \'1\'
+AND `c`.`estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pagos` `c`
+JOIN `reservas` `tc` ON `c`.`ID_Reserva` = `tc`.`ID_Reserva`
+WHERE `c`.`ID_Hotel` = \'1\'
+AND `c`.`estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pagos` `c`
+JOIN `reservas` `tc` ON `c`.`ID_Reserva` = `tc`.`ID_Reserva`
+WHERE `c`.`ID_Hotel` = \'1\'
+AND `c`.`estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pagos` `c`
+JOIN `reservas` `tc` ON `c`.`ID_Reserva` = `tc`.`ID_Reserva`
+WHERE `c`.`ID_Hotel` = :c.ID_Hotel:
+AND `c`.`estado` = :c.estado:', [...], false)
+ 5 APPPATH\Models\PagosModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pagos.php(68): App\Models\PagosModel->getId('1')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pagos->show('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pagos))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-01 20:13:02 --> mysqli_sql_exception: Unknown column 'dni' in 'field list' in C:\xampp\htdocs\integrador\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\integrador\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `trabaja...', 0)
+#1 C:\xampp\htdocs\integrador\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `trabaja...')
+#2 C:\xampp\htdocs\integrador\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `trabaja...')
+#3 C:\xampp\htdocs\integrador\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `trabaja...', Array, false)
+#4 C:\xampp\htdocs\integrador\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\integrador\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\integrador\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\integrador\app\Controllers\Trabajadores.php(217): CodeIgniter\Model->update('6', Array)
+#8 C:\xampp\htdocs\integrador\system\CodeIgniter.php(934): App\Controllers\Trabajadores->update('6')
+#9 C:\xampp\htdocs\integrador\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajadores))
+#10 C:\xampp\htdocs\integrador\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\integrador\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-07-01 20:13:02 --> Unknown column 'dni' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `trabajadores` SET `nombres` = \'Dian Gabriel\', `apellidos` = \'Albarrán Romero\', `dni` = \'71621673\', `email` = \'juan@upeu.com\', `telefono` = \'931935106\', `ID_Rol` = \'4\'
+WHERE `trabajadores`.`ID_Trabajador` IN (\'6\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `trabajadores` SET `nombres` = \'Dian Gabriel\', `apellidos` = \'Albarrán Romero\', `dni` = \'71621673\', `email` = \'juan@upeu.com\', `telefono` = \'931935106\', `ID_Rol` = \'4\'
+WHERE `trabajadores`.`ID_Trabajador` IN (\'6\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `trabajadores` SET `nombres` = \'Dian Gabriel\', `apellidos` = \'Albarrán Romero\', `dni` = \'71621673\', `email` = \'juan@upeu.com\', `telefono` = \'931935106\', `ID_Rol` = \'4\'
+WHERE `trabajadores`.`ID_Trabajador` IN (\'6\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `trabajadores` SET `nombres` = :nombres:, `apellidos` = :apellidos:, `dni` = :dni:, `email` = :email:, `telefono` = :telefono:, `ID_Rol` = :ID_Rol:
+WHERE `trabajadores`.`ID_Trabajador` IN :trabajadores.ID_Trabajador:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Trabajadores.php(217): CodeIgniter\Model->update('6', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Trabajadores->update('6')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajadores))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-01 21:25:47 --> Trying to access array offset on value of type null
+in APPPATH/Views/welcome_message.php on line 57.
+ 1 APPPATH/Views/welcome_message.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/home/app/public_html/agencia/app/Views/welcome_message.php', 57, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/home/app/public_html/agencia/app/Views/welcome_message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('welcome_message')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-01 21:36:17 --> Trying to access array offset on value of type null
+in APPPATH/Views/welcome_message.php on line 57.
+ 1 APPPATH/Views/welcome_message.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/home/app/public_html/agencia/app/Views/welcome_message.php', 57, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/home/app/public_html/agencia/app/Views/welcome_message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('welcome_message')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-01 21:41:30 --> Trying to access array offset on value of type null
+in APPPATH/Views/welcome_message.php on line 58.
+ 1 APPPATH/Views/welcome_message.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/home/app/public_html/agencia/app/Views/welcome_message.php', 58, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/home/app/public_html/agencia/app/Views/welcome_message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('welcome_message')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-01 21:43:42 --> Trying to access array offset on value of type null
+in APPPATH/Views/welcome_message.php on line 58.
+ 1 APPPATH/Views/welcome_message.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/home/app/public_html/agencia/app/Views/welcome_message.php', 58, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/home/app/public_html/agencia/app/Views/welcome_message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('welcome_message')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-01 21:45:47 --> Trying to access array offset on value of type null
+in APPPATH/Views/welcome_message.php on line 58.
+ 1 APPPATH/Views/welcome_message.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/home/app/public_html/agencia/app/Views/welcome_message.php', 58, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/home/app/public_html/agencia/app/Views/welcome_message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('welcome_message')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-01 21:52:50 --> Trying to access array offset on value of type null
+in APPPATH/Views/welcome_message.php on line 58.
+ 1 APPPATH/Views/welcome_message.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/home/app/public_html/agencia/app/Views/welcome_message.php', 58, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/home/app/public_html/agencia/app/Views/welcome_message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('welcome_message')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-01 21:56:31 --> Trying to access array offset on value of type null
+in APPPATH/Views/welcome_message.php on line 58.
+ 1 APPPATH/Views/welcome_message.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/home/app/public_html/agencia/app/Views/welcome_message.php', 58, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/home/app/public_html/agencia/app/Views/welcome_message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('welcome_message')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-01 21:57:47 --> Trying to access array offset on value of type null
+in APPPATH/Views/welcome_message.php on line 58.
+ 1 APPPATH/Views/welcome_message.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/home/app/public_html/agencia/app/Views/welcome_message.php', 58, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/home/app/public_html/agencia/app/Views/welcome_message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('welcome_message')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-01 22:00:01 --> Trying to access array offset on value of type null
+in APPPATH/Views/welcome_message.php on line 57.
+ 1 APPPATH/Views/welcome_message.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/home/app/public_html/agencia/app/Views/welcome_message.php', 57, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/home/app/public_html/agencia/app/Views/welcome_message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('welcome_message')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-01 22:01:14 --> Trying to access array offset on value of type null
+in APPPATH/Views/welcome_message.php on line 57.
+ 1 APPPATH/Views/welcome_message.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/home/app/public_html/agencia/app/Views/welcome_message.php', 57, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/home/app/public_html/agencia/app/Views/welcome_message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('welcome_message')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-01 22:09:30 --> Trying to access array offset on value of type null
+in APPPATH/Views/welcome_message.php on line 57.
+ 1 APPPATH/Views/welcome_message.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/home/app/public_html/agencia/app/Views/welcome_message.php', 57, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/home/app/public_html/agencia/app/Views/welcome_message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('welcome_message')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-01 22:10:14 --> Trying to access array offset on value of type null
+in APPPATH/Views/welcome_message.php on line 57.
+ 1 APPPATH/Views/welcome_message.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/home/app/public_html/agencia/app/Views/welcome_message.php', 57, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/home/app/public_html/agencia/app/Views/welcome_message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('welcome_message')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-01 22:10:35 --> Trying to access array offset on value of type null
+in APPPATH/Views/welcome_message.php on line 57.
+ 1 APPPATH/Views/welcome_message.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/home/app/public_html/agencia/app/Views/welcome_message.php', 57, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/home/app/public_html/agencia/app/Views/welcome_message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('welcome_message')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-01 22:12:02 --> Trying to access array offset on value of type null
+in APPPATH/Views/welcome_message.php on line 57.
+ 1 APPPATH/Views/welcome_message.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/home/app/public_html/agencia/app/Views/welcome_message.php', 57, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/home/app/public_html/agencia/app/Views/welcome_message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('welcome_message')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

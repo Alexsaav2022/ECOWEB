@@ -1,0 +1,495 @@
+ERROR - 2023-05-24 00:56:29 --> mysqli_sql_exception: Table 'restful.tipos_cursos' doesn't exist in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\restful\app\Models\CursosModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\restful\app\Controllers\Cursos.php(18): App\Models\CursosModel->getCursos()
+#6 C:\xampp\htdocs\restful\system\CodeIgniter.php(934): App\Controllers\Cursos->index()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\restful\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-24 00:56:29 --> Table 'restful.tipos_cursos' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = :c.esatdo:', [...], false)
+ 5 APPPATH\Models\CursosModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Cursos.php(18): App\Models\CursosModel->getCursos()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cursos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-24 00:56:36 --> mysqli_sql_exception: Table 'restful.tipos_cursos' doesn't exist in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\restful\app\Models\CursosModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\restful\app\Controllers\Cursos.php(18): App\Models\CursosModel->getCursos()
+#6 C:\xampp\htdocs\restful\system\CodeIgniter.php(934): App\Controllers\Cursos->index()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\restful\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-24 00:56:36 --> Table 'restful.tipos_cursos' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = :c.esatdo:', [...], false)
+ 5 APPPATH\Models\CursosModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Cursos.php(18): App\Models\CursosModel->getCursos()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cursos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-24 00:57:25 --> mysqli_sql_exception: Table 'restful.tipos_cursos' doesn't exist in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\restful\app\Models\CursosModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\restful\app\Controllers\Cursos.php(18): App\Models\CursosModel->getCursos()
+#6 C:\xampp\htdocs\restful\system\CodeIgniter.php(934): App\Controllers\Cursos->index()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\restful\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-24 00:57:25 --> Table 'restful.tipos_cursos' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = :c.esatdo:', [...], false)
+ 5 APPPATH\Models\CursosModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Cursos.php(18): App\Models\CursosModel->getCursos()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cursos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-24 00:58:09 --> mysqli_sql_exception: Table 'restful.tipos_cursos' doesn't exist in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\restful\app\Models\CursosModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\restful\app\Controllers\Cursos.php(18): App\Models\CursosModel->getCursos()
+#6 C:\xampp\htdocs\restful\system\CodeIgniter.php(934): App\Controllers\Cursos->index()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\restful\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-24 00:58:09 --> Table 'restful.tipos_cursos' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = :c.esatdo:', [...], false)
+ 5 APPPATH\Models\CursosModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Cursos.php(18): App\Models\CursosModel->getCursos()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cursos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 01:15:52 --> Undefined index: curso_id
+in APPPATH\Controllers\Cursos.php on line 22.
+ 1 APPPATH\Controllers\Cursos.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: curso_id', 'C:\\xampp\\htdocs\\restful\\app\\Controllers\\Cursos.php', 22, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cursos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 01:16:12 --> Undefined index: curso_id
+in APPPATH\Controllers\Cursos.php on line 66.
+ 1 APPPATH\Controllers\Cursos.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: curso_id', 'C:\\xampp\\htdocs\\restful\\app\\Controllers\\Cursos.php', 66, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cursos->show('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 01:17:35 --> Undefined index: curso_id
+in APPPATH\Controllers\Cursos.php on line 22.
+ 1 APPPATH\Controllers\Cursos.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: curso_id', 'C:\\xampp\\htdocs\\restful\\app\\Controllers\\Cursos.php', 22, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cursos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-24 01:18:04 --> mysqli_sql_exception: Table 'restful.tipos_cursos' doesn't exist in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\restful\app\Models\CursosModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\restful\app\Controllers\Cursos.php(24): App\Models\CursosModel->getCursos()
+#6 C:\xampp\htdocs\restful\system\CodeIgniter.php(934): App\Controllers\Cursos->index()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\restful\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-24 01:18:04 --> Table 'restful.tipos_cursos' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_cursos` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = :c.esatdo:', [...], false)
+ 5 APPPATH\Models\CursosModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Cursos.php(24): App\Models\CursosModel->getCursos()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cursos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-24 01:18:49 --> mysqli_sql_exception: Unknown column 'c.esatdo' in 'where clause' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\restful\app\Models\CursosModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\restful\app\Controllers\Cursos.php(24): App\Models\CursosModel->getCursos()
+#6 C:\xampp\htdocs\restful\system\CodeIgniter.php(934): App\Controllers\Cursos->index()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\restful\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-24 01:18:49 --> Unknown column 'c.esatdo' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`esatdo` = :c.esatdo:', [...], false)
+ 5 APPPATH\Models\CursosModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Cursos.php(24): App\Models\CursosModel->getCursos()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cursos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-24 01:19:09 --> mysqli_sql_exception: Unknown column 'c.idcategoria' in 'on clause' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\restful\app\Models\CursosModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\restful\app\Controllers\Cursos.php(24): App\Models\CursosModel->getCursos()
+#6 C:\xampp\htdocs\restful\system\CodeIgniter.php(934): App\Controllers\Cursos->index()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\restful\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-24 01:19:09 --> Unknown column 'c.idcategoria' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`estado` = :c.estado:', [...], false)
+ 5 APPPATH\Models\CursosModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Cursos.php(24): App\Models\CursosModel->getCursos()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cursos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-24 01:20:08 --> mysqli_sql_exception: Unknown column 'c.idcategoria' in 'on clause' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\restful\app\Models\CursosModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\restful\app\Controllers\Cursos.php(24): App\Models\CursosModel->getCursos()
+#6 C:\xampp\htdocs\restful\system\CodeIgniter.php(934): App\Controllers\Cursos->index()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\restful\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-24 01:20:08 --> Unknown column 'c.idcategoria' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`idcategoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`estado` = :c.estado:', [...], false)
+ 5 APPPATH\Models\CursosModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Cursos.php(24): App\Models\CursosModel->getCursos()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cursos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 01:20:51 --> Undefined index: curso_id
+in APPPATH\Controllers\Cursos.php on line 66.
+ 1 APPPATH\Controllers\Cursos.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: curso_id', 'C:\\xampp\\htdocs\\restful\\app\\Controllers\\Cursos.php', 66, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cursos->show('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-24 01:21:36 --> mysqli_sql_exception: Unknown column 'c.idcruso' in 'where clause' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\restful\app\Models\CursosModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\restful\app\Controllers\Cursos.php(68): App\Models\CursosModel->getId('1')
+#6 C:\xampp\htdocs\restful\system\CodeIgniter.php(934): App\Controllers\Cursos->show('1')
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\restful\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-24 01:21:36 --> Unknown column 'c.idcruso' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`id_categoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`idcruso` = \'1\'
+AND `c`.`esatdo` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`id_categoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`idcruso` = \'1\'
+AND `c`.`esatdo` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`id_categoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`idcruso` = \'1\'
+AND `c`.`esatdo` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`id_categoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`idcruso` = :c.idcruso:
+AND `c`.`esatdo` = :c.esatdo:', [...], false)
+ 5 APPPATH\Models\CursosModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Cursos.php(68): App\Models\CursosModel->getId('1')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cursos->show('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-24 01:22:07 --> mysqli_sql_exception: Unknown column 'c.esatdo' in 'where clause' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\restful\app\Models\CursosModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\restful\app\Controllers\Cursos.php(68): App\Models\CursosModel->getId('1')
+#6 C:\xampp\htdocs\restful\system\CodeIgniter.php(934): App\Controllers\Cursos->show('1')
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\restful\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-24 01:22:07 --> Unknown column 'c.esatdo' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`id_categoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`idcurso` = \'1\'
+AND `c`.`esatdo` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`id_categoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`idcurso` = \'1\'
+AND `c`.`esatdo` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`id_categoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`idcurso` = \'1\'
+AND `c`.`esatdo` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cursos` `c`
+JOIN `tipos_curso` `tc` ON `c`.`id_tipo` = `tc`.`idtipocurso`
+JOIN `categorias_curso` `cc` ON `c`.`id_categoria` = `cc`.`idcategoriacurso`
+JOIN `naturalezas_curso` `nc` ON `c`.`id_naturaleza` = `nc`.`idnaturalezacurso`
+WHERE `c`.`idcurso` = :c.idcurso:
+AND `c`.`esatdo` = :c.esatdo:', [...], false)
+ 5 APPPATH\Models\CursosModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Cursos.php(68): App\Models\CursosModel->getId('1')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cursos->show('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cursos))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 17:06:34 --> syntax error, unexpected end of file
+in APPPATH\Views\welcome_message.php on line 87.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('welcome_message')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

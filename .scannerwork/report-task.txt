@@ -1,0 +1,6 @@
+projectKey=WEBSYSTEM
+serverUrl=http://localhost:9000
+serverVersion=10.5.0.89998
+dashboardUrl=http://localhost:9000/dashboard?id=WEBSYSTEM
+ceTaskId=c06e53f2-9c0a-4c1f-a756-4c59c9942094
+ceTaskUrl=http://localhost:9000/api/ce/task?id=c06e53f2-9c0a-4c1f-a756-4c59c9942094
